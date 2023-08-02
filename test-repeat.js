@@ -19,6 +19,7 @@ const args = arg({
 
 const repeatNtimes = args['-n'] ? args['-n'] : 1
 
+bla
 console.log('will repeat Cypress run %d time(s)', repeatNtimes)
 
 const allRunOptions = []
