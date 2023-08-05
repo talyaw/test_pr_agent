@@ -25,14 +25,14 @@ window.app = window.app || {}
       var router = Router({
         '/': setState.bind(this, { nowShowing: app.ALL_TODOS }),
         '/active': setState.bind(this, { nowShowing: app.ACTIVE_TODOS }),
-        '/completed': setState.bind(this, { nowShowing: app.COMPLETED_TODOS })
+        '/done': setState.bind(this, { nowShowing: app.COMPLETED_TODOS })
       })
       router.init('/')
     },
 
     handleNewTodoKeyDown: function (event) {
       if (event.keyCode !== ENTER_KEY) {
-        return
+        return;
       }
 
       event.preventDefault()
@@ -144,7 +144,7 @@ window.app = window.app || {}
             <input
               ref='newField'
               className='new-todo'
-              placeholder='What needs to be done?'
+              placeholder='What else needs to be done?'
               onKeyDown={this.handleNewTodoKeyDown}
               autoFocus
             />
